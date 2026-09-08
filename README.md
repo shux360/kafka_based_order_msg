@@ -30,6 +30,14 @@ python -m pip install -r requirements.txt
 python -m order_system.consumer
 ```
 
+If port `8081` is already occupied, choose another host port for both Compose and the Python clients before starting:
+
+```powershell
+$env:SCHEMA_REGISTRY_PORT="8082"
+$env:SCHEMA_REGISTRY_URL="http://localhost:8082"
+docker compose up -d
+```
+
 In a second PowerShell window, activate the same environment and produce ten messages. The final message deliberately fails and is sent to the DLQ:
 
 ```powershell
