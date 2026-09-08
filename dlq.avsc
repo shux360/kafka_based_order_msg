@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "FailedOrder",
+  "namespace": "com.assignment.orders",
+  "fields": [
+    {"name": "orderId", "type": "string"},
+    {"name": "product", "type": "string"},
+    {"name": "price", "type": "float"},
+    {"name": "error", "type": "string"},
+    {"name": "attempts", "type": "int"},
+    {"name": "failedAt", "type": "string"}
+  ]
+}
+
